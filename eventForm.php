@@ -1,5 +1,5 @@
 <?php
-    
+
     $dateInserted = currentDateUSFormat();
     $dateUpdated = currentDateUSFormat();
 
@@ -71,7 +71,7 @@
                 $newEventId =  $conn->lastInsertId();   // grabs last event id
                 
                 //send user to "a response page" to display to the customer that everything worked
-                header('Location: eventResponsePage.php?eventId=' . $newEventId);  // quick, less complex technique - generic response page	   
+                header('Location: eventResponsePage.php?eventId=' . $newEventId);     
             }
             
             catch(PDOException $e)
